@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="GameEngine.cbp" />
+		<Project filename="examples/1_user_interactions/user_interactions.cbp" />
+		<Project filename="examples/2_image_drawing/image_drawing.cbp" />
+		<Project filename="examples/3_model_rendering/model_rendering.cbp" />
+		<Project filename="tests/tests.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

@@ -1,0 +1,81 @@
+#include <GameEngine/graphics/Spinlock.hpp>
+using namespace GameEngine;
+
+Spinlock::Spinlock()
+{
+    Engine::initialize();
+    allocate();
+}
+
+Spinlock::Spinlock(unsigned int width, unsigned int height)
+{
+    Engine::initialize();
+    _width = width;
+    _height = height;
+    allocate();
+}
+
+Spinlock::~Spinlock()
+{
+    deallocate();
+}
+
+void Spinlock::resize(unsigned int width, unsigned int height)
+{
+    if (_width != width || _height != height)
+    {
+        _width = width;
+        _height = height;
+        deallocate();
+        allocate();
+    }
+}
+
+unsigned int Spinlock::width() const
+{
+    return _width;
+}
+
+unsigned int Spinlock::height() const
+{
+    return _height;
+}
+
+unsigned int Spinlock::ID() const
+{
+    return _ID;
+}
+
+uint64_t Spinlock::handle() const
+{
+    return _handle;
+}
+
+void Spinlock::allocate()
+{
+    Utilities::check_GL_error();
+    //Create the texture ID
+    glCreateTextures(GL_TEXTURE_2D, 1, &_ID);
+    //Allocate texture on GPU memory
+    glTextureStorage2D(_ID, 1, GL_R32UI, _width, _height);
+    Utilities::check_GL_error();
+    //Get the bindless handle and make it resident
+    _handle = glGetImageHandleARB(_ID, 0, false, 0, GL_R32UI);
+    glMakeImageHandleResidentARB(_handle, GL_READ_WRITE);
+    Utilities::check_GL_error();
+    //Set all the locks to 0
+    unsigned int clear_value = 0.;
+    glClearTexImage(_ID, 0, GL_RED_INTEGER, GL_UNSIGNED_INT, &clear_value);
+    Utilities::check_GL_error();
+}
+
+void Spinlock::deallocate()
+{
+    if (glIsImageHandleResidentARB(_handle))
+    {
+        glMakeImageHandleNonResidentARB(_handle);
+    }
+    glDeleteTextures(1, &_ID);
+    _ID = 0;
+    _handle = 0;
+}

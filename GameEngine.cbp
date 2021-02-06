@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GameEngine" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./bin" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/GameEngine/Engine.hpp" />
+		<Unit filename="include/GameEngine/External.hpp" />
+		<Unit filename="include/GameEngine/GameEngine.hpp" />
+		<Unit filename="include/GameEngine/Macro.hpp" />
+		<Unit filename="include/GameEngine/Utilities.hpp" />
+		<Unit filename="include/GameEngine/geometry/Matrix.hpp" />
+		<Unit filename="include/GameEngine/geometry/Referential.hpp" />
+		<Unit filename="include/GameEngine/geometry/geometry.hpp" />
+		<Unit filename="include/GameEngine/geometry/quaternions/Orientation.hpp" />
+		<Unit filename="include/GameEngine/geometry/quaternions/Quaternion.hpp" />
+		<Unit filename="include/GameEngine/geometry/quaternions/Rotation.hpp" />
+		<Unit filename="include/GameEngine/geometry/quaternions/quaternions.hpp" />
+		<Unit filename="include/GameEngine/geometry/vectors/Direction.hpp" />
+		<Unit filename="include/GameEngine/geometry/vectors/Position.hpp" />
+		<Unit filename="include/GameEngine/geometry/vectors/Vector.hpp" />
+		<Unit filename="include/GameEngine/geometry/vectors/vectors.hpp" />
+		<Unit filename="include/GameEngine/graphics/Image/AntiAliasedSurface.hpp" />
+		<Unit filename="include/GameEngine/graphics/Image/Canvas.hpp" />
+		<Unit filename="include/GameEngine/graphics/Image/Gbuffer.hpp" />
+		<Unit filename="include/GameEngine/graphics/Image/Image.hpp" />
+		<Unit filename="include/GameEngine/graphics/Image/LayeredData.hpp" />
+		<Unit filename="include/GameEngine/graphics/RGB.hpp" />
+		<Unit filename="include/GameEngine/graphics/RGBA.hpp" />
+		<Unit filename="include/GameEngine/graphics/graphics.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/Shader.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/Shader2D.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/Shader3D.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/ShaderTest.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/ShaderUpdate.hpp" />
+		<Unit filename="include/GameEngine/graphics/shaders/shaders.hpp" />
+		<Unit filename="include/GameEngine/interface/Button.hpp" />
+		<Unit filename="include/GameEngine/interface/Keyboard.hpp" />
+		<Unit filename="include/GameEngine/interface/Mouse.hpp" />
+		<Unit filename="include/GameEngine/interface/Timer.hpp" />
+		<Unit filename="include/GameEngine/interface/Window.hpp" />
+		<Unit filename="include/GameEngine/interface/interface.hpp" />
+		<Unit filename="include/GameEngine/world/Entity.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Face.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Material.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Mesh.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Model.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Part.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Texture.hpp" />
+		<Unit filename="include/GameEngine/world/Model/UV.hpp" />
+		<Unit filename="include/GameEngine/world/Model/UVmap.hpp" />
+		<Unit filename="include/GameEngine/world/Model/Vertex.hpp" />
+		<Unit filename="include/GameEngine/world/cameras/Camera.hpp" />
+		<Unit filename="include/GameEngine/world/cameras/CameraFoV.hpp" />
+		<Unit filename="include/GameEngine/world/cameras/Stand.hpp" />
+		<Unit filename="include/GameEngine/world/cameras/StandFPS.hpp" />
+		<Unit filename="include/GameEngine/world/cameras/cameras.hpp" />
+		<Unit filename="include/GameEngine/world/world.hpp" />
+		<Unit filename="src/GameEngine/Engine.cpp" />
+		<Unit filename="src/GameEngine/Utilities.cpp" />
+		<Unit filename="src/GameEngine/geometry/Matrix.cpp" />
+		<Unit filename="src/GameEngine/geometry/Referential.cpp" />
+		<Unit filename="src/GameEngine/geometry/quaternions/Orientation.cpp" />
+		<Unit filename="src/GameEngine/geometry/quaternions/Quaternion.cpp" />
+		<Unit filename="src/GameEngine/geometry/quaternions/Rotation.cpp" />
+		<Unit filename="src/GameEngine/geometry/vectors/Direction.cpp" />
+		<Unit filename="src/GameEngine/geometry/vectors/Position.cpp" />
+		<Unit filename="src/GameEngine/geometry/vectors/Vector.cpp" />
+		<Unit filename="src/GameEngine/graphics/Image/AntiAliasedSurface.cpp" />
+		<Unit filename="src/GameEngine/graphics/Image/Canvas.cpp" />
+		<Unit filename="src/GameEngine/graphics/Image/Gbuffer.cpp" />
+		<Unit filename="src/GameEngine/graphics/Image/Image.cpp" />
+		<Unit filename="src/GameEngine/graphics/Image/LayeredData.cpp" />
+		<Unit filename="src/GameEngine/graphics/RGB.cpp" />
+		<Unit filename="src/GameEngine/graphics/RGBA.cpp" />
+		<Unit filename="src/GameEngine/graphics/shaders/Shader.cpp" />
+		<Unit filename="src/GameEngine/graphics/shaders/Shader2D.cpp" />
+		<Unit filename="src/GameEngine/graphics/shaders/Shader3D.cpp" />
+		<Unit filename="src/GameEngine/graphics/shaders/ShaderTest.cpp" />
+		<Unit filename="src/GameEngine/graphics/shaders/ShaderUpdate.cpp" />
+		<Unit filename="src/GameEngine/interface/Keyboard.cpp" />
+		<Unit filename="src/GameEngine/interface/Mouse.cpp" />
+		<Unit filename="src/GameEngine/interface/Timer.cpp" />
+		<Unit filename="src/GameEngine/interface/Window.cpp" />
+		<Unit filename="src/GameEngine/world/Entity.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Face.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Mesh.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Model.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Part.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Texture.cpp" />
+		<Unit filename="src/GameEngine/world/Model/UV.cpp" />
+		<Unit filename="src/GameEngine/world/Model/UVmap.cpp" />
+		<Unit filename="src/GameEngine/world/Model/Vertex.cpp" />
+		<Unit filename="src/GameEngine/world/cameras/Camera.cpp" />
+		<Unit filename="src/GameEngine/world/cameras/CameraFoV.cpp" />
+		<Unit filename="src/GameEngine/world/cameras/Stand.cpp" />
+		<Unit filename="src/GameEngine/world/cameras/StandFPS.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="2" line="2" />
+				<doxyfile_project project_number="0.2.9" output_directory="doc" />
+				<doxyfile_build extract_all="1" extract_private="1" extract_static="1" />
+				<doxyfile_warnings />
+				<doxyfile_alpha_index alphabetical_index="0" />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

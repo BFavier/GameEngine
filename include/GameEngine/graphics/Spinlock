@@ -1,0 +1,30 @@
+#pragma once
+#include <GameEngine/Utilities.hpp>
+#include <GameEngine/Engine.hpp>
+
+
+namespace GameEngine
+{
+    ///< Deprecated: remove me
+    class Spinlock
+    {
+    public:
+        Spinlock();
+        Spinlock(unsigned int width, unsigned int height);
+        ~Spinlock();
+    public:
+        void resize(unsigned int width, unsigned int height);
+        unsigned int width() const;
+        unsigned int height() const;
+        unsigned int ID() const;
+        uint64_t handle() const;
+    protected:
+        unsigned int _ID = 0;
+        uint64_t _handle = 0;
+        unsigned int _width = 0;
+        unsigned int _height = 0;
+    protected:
+        void allocate();
+        void deallocate();
+    };
+}
